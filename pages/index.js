@@ -21,7 +21,7 @@ export default function Home() {
   const handleWeather = async () => {
     setIsLoading(true)
     const city = document.getElementById('weather-input').value
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=b6acb7309ef04058aa4113214231206 &q=${city}&days=5&aqi=no&alerts=no`)
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.API_KEY} &q=${city}&days=5&aqi=no&alerts=no`)
       .then(res => res.json())
       .then(data => {
         if (data.hasOwnProperty('error')) {
