@@ -72,6 +72,7 @@ export default function Home() {
     <Layout>
       <Head>
         <title>WeatherFA</title>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       </Head>
 
       <h1 className='pt-28 pb-8 text-gray-200 text-7xl text-center font-light'>WeatherFA</h1>
